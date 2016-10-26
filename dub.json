@@ -1,0 +1,6 @@
+{
+	"name" : "resume-parser",
+	"description" : "Hello World - A minimal DUB bundle.",
+	"dependencies" : {
+	}
+}
