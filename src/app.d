@@ -3,6 +3,9 @@ import std.string;
 import std.regex;
 import std.array;
 
+import core.stdc.errno;
+import std.exception;
+
 import FileConverter;
 import Data.Section;
 
@@ -17,31 +20,55 @@ void main(string[] args) {
 		writeln("No file specified. Converting Resume.docx.");
 		convertFile();
 	}
-	
-	File resume = File(TEMPORARY_RESUME, "r");
-	string[] currentLine;
-	int[string] keywords = getKeywords();
-	
-	while(!resume.eof())
+	try
 	{
-		currentLine = split(resume.readln(), regex(" "));
+		File resume = File(TEMPORARY_RESUME, "r");
+		string[] currentLine;
+		int[string] keywords = getKeywords();
+	
+		while(!resume.eof())
+		{
+			currentLine = split(resume.readln(), regex(" "));
 		
-		
-		foreach(string wd; currentLine) {
-			if(toLower(wd).replace(",", "") in keywords) {
-				keywords[toLower(wd).replace(",", "")]++;
+			foreach(string wd; currentLine) {
+				if(toLower(wd).replace(",", "") in keywords) {
+					keywords[toLower(wd).replace(",", "")]++;
+				}
 			}
 		}
 		
+		string[] keys = keywords.keys;
+	
+		foreach(string K; keys) {
+			writeln(K, ":\t", keywords[K]);
+		}
+	
+		resume.close();
 	}
 	
-	string[] keys = keywords.keys;
-	
-	foreach(string K; keys) {
-		writeln(K, ":\t", keywords[K]);
+	catch (ErrnoException ex)
+	{
+		switch(ex.errno)
+		{
+			case EPERM:
+			case EACCES:
+				// Permission denied
+				writeln("You do not have permission to access that file.\nTry another file: ");
+				break;
+
+			case ENOENT:
+				// File does not exist
+				writeln("The file path you entered does not exist.\nTry again: ");
+				break;
+
+			default:
+				// Handle other errors
+				writeln("The file path has some type of random error.\nTry again: ");
+				break;
+		}
 	}
 	
-	resume.close();
+	
 	writeln("------End Resume Parser------");
 	
 }
