@@ -1,0 +1,53 @@
+ANTHONY HADDOX
+
+OBJECTIVE
+Motivated Computer Science student with a solid background in algorithms and software design seeking a rewarding position as a software engineer.
+
+SKILLS
+Languages: C#, Java, C++, DLang, HTML, CSS, JavaScript, SQL
+Frameworks: .NET, OpenGL, Android, Spring Boot, JavaFX, MVC, Bootstrap, Entity Framework
+Tools: Unity3D, IntelliJ IDEA, Eclipse, Android Studio, Microsoft Visual Studio, Git, GitHub, Microsoft TFS, Maven, Jenkins, Microsoft SQL Server
+
+WORK EXPERIENCE
+LektrickSno Productions
+Software Development Intern, July 2016 to September 2016
+- Using .NET technologies and Test Driven Development, designed an automated emailing system which allowed users to recover and reset their account information.
+- Wrote unit tests to ensure increased code coverage and promote bug-free software.
+- Independently completed tasks and delivered code on schedule.
+
+The Rimlight Project
+Gameplay Programmer, July 2013 to September 2016
+- Utilized Unity3D game engine to develop a robust space-shooter for the Xbox One Platform.
+- Organized a major refactoring effort which resulted in a more manageable codebase, streamlined project structure, and more efficient API utilization.
+- Designed and implemented a challenging AI system written in C#.
+- Wrote a simple Java issue tracking tool with a JavaFX GUI for in-house use.
+
+EDUCATION
+California State Polytechnic University, Pomona - June 2017
+	Bachelor of Science in Computer Science
+California State Polytechnic University, Pomona - June 2017
+	Bachelor of Arts in Political Science
+		Thesis: The Athenian Representative Democracy - An Unintended Evolution
+
+COURSE WORK AND PROJECTS
+Individual Project
+Software Developer, August 2016
+- Developed a financial goal tracker as a way to learn more about the .NET platform, Entity Framework 6, and WPF.
+
+Computer Graphics Course
+Software Developer, March 2016 to June 2016
+- Worked with another individual to create a lightweight Java voxel game engine.
+- Implemented the game graphics with the OpenGL graphics library.
+
+Microsoft Imagine Cup 2016
+Project Lead, December 2015 to February 2016
+- Served as project lead and creator of a web service designed to function as an online repository for user-submitted content.
+- Designed and implemented the software around the MVC and .NET Frameworks.
+- Drafted software design documentation which outlined the project idea, project purpose, and implementation details.
+
+Software Engineering Course
+Full Stack Developer, September 2014 to December 2014
+- Served as project lead to a three-member team which developed an open source, Java-based, RESTful web service using the Spring Boot framework.
+- Developed the software using a modified Agile methodology.
+- Using Maven as a build tool and Jenkins for continuous integration, the software was deployed to an AWS server.
+- Used Github for source and version control.

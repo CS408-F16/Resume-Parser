@@ -15,6 +15,7 @@ void convertFile() {
 
 void convertFile(string filePath) {
 	auto WordToTxtPID = spawnProcess(["WordToTxt", filePath]);
+	writeln(filePath);
 	if (wait(WordToTxtPID) != 0)
 	    writeln("Conversion failed!");
 	else

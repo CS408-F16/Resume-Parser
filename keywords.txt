@@ -1,0 +1,12 @@
+c++
+c#
+java
+.net
+html
+css
+javascript
+sql
+opengl
+javafx
+mvc
+bootstrap

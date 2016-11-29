@@ -11,7 +11,7 @@ import std.exception;
 import FileConverter;
 
 // does not support spacing or symbols in the match function I use, if you wanna use it make a check to change it over when you wanna do it LOL I dont wanna do that though
-void _main() 
+void _main(string[] args) 
 {
 
 	// make sure it is all lowercase because when it checks it makes the words in .txt doc lowerCase
