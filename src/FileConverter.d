@@ -1,10 +1,10 @@
-import std.array;
-import std.file;
-import std.stdio;
-import std.process;
-
 import core.stdc.errno;
+
+import std.array;
 import std.exception;
+import std.file;
+import std.process;
+import std.stdio;
 
 static const string TEMPORARY_RESUME = "_tempResume.txt";
 

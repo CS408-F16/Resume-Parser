@@ -1,13 +1,13 @@
+import core.stdc.errno;
+
+import std.array;
+import std.exception;
+import std.regex;
 import std.stdio;
 import std.string;
-import std.regex;
-import std.array;
-
-import core.stdc.errno;
-import std.exception;
 
 import FileConverter;
-import Data.Section;
+
 
 void main(string[] args) {
 	writeln("------Start Resume Parser------");
@@ -20,11 +20,16 @@ void main(string[] args) {
 		writeln("No file specified. Converting Resume.docx.");
 		convertFile();
 	}
+	
 	try
 	{
 		File resume = File(TEMPORARY_RESUME, "r");
 		string[] currentLine;
 		int[string] keywords = getKeywords();
+		int[string] actionWords = getActionWords();
+		int wordCount;
+		int keywordCount;
+		int actionWordCount;
 	
 		while(!resume.eof())
 		{
@@ -33,17 +38,44 @@ void main(string[] args) {
 			foreach(string wd; currentLine) {
 				if(toLower(wd).replace(",", "") in keywords) {
 					keywords[toLower(wd).replace(",", "")]++;
+					keywordCount++;
 				}
+				if(toLower(wd).replace(",", "") in actionWords) {
+					actionWords[toLower(wd).replace(",", "")]++;
+					actionWordCount++;
+				}
+				wordCount++;
 			}
 		}
 		
+		resume.close();
+		
 		string[] keys = keywords.keys;
+		int[string] usedKeywords;
+		string[] actions = actionWords.keys;
+		int[string] usedActionWords;
 	
+		foreach(string K; keys) {
+			if(keywords[K] > 0)
+				usedKeywords[K] = keywords[K];
+		}
+		foreach(string A; actions) {
+			if(actionWords[A] > 0)
+				usedActionWords[A] = actionWords[A];
+		}
+		
+		keys = usedKeywords.keys;
 		foreach(string K; keys) {
 			writeln(K, ":\t", keywords[K]);
 		}
-	
-		resume.close();
+		actions = usedActionWords.keys;
+		foreach(string A; actions) {
+			writeln(A, ":\t", actionWords[A]);
+		}
+		
+		writeln("Word count: ", wordCount);
+		writeln("Keyword count: ", keywordCount);
+		writeln("Action Word count: ", actionWordCount);	
 	}
 	
 	catch (ErrnoException ex)
@@ -82,10 +114,25 @@ public int[string] getKeywords() {
 	{
 		currentLine = file.readln();
 		if(currentLine.length > 0)
-			//keywords[currentLine[0..$-1]] = 0;
 			keywords[chomp(currentLine)] = 0;
 			
 	}
 	
 	return keywords;
+}
+
+public int[string] getActionWords() {
+	int[string] actionWords;
+	
+	File file = File("actionWords.txt", "r");
+	string currentLine;
+	while(!file.eof())
+	{
+		currentLine = file.readln();
+		if(currentLine.length > 0)
+			actionWords[chomp(currentLine)] = 0;
+			
+	}
+	
+	return actionWords;
 }
