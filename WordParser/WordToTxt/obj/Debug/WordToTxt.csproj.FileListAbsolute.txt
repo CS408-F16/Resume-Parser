@@ -1,0 +1,6 @@
+C:\Users\antzy_000\Documents\Programming\D\WordParser\WordToTxt\bin\Debug\WordToTxt.exe.config
+C:\Users\antzy_000\Documents\Programming\D\WordParser\WordToTxt\bin\Debug\WordToTxt.exe
+C:\Users\antzy_000\Documents\Programming\D\WordParser\WordToTxt\bin\Debug\WordToTxt.pdb
+C:\Users\antzy_000\Documents\Programming\D\WordParser\WordToTxt\obj\Debug\WordToTxt.exe
+C:\Users\antzy_000\Documents\Programming\D\WordParser\WordToTxt\obj\Debug\WordToTxt.pdb
+C:\Users\antzy_000\Documents\Programming\D\WordParser\WordToTxt\obj\Debug\WordToTxt.csprojResolveAssemblyReference.cache

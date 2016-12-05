@@ -1,0 +1,5 @@
+C:\Users\antzy_000\Documents\Programming\D\WordParser\WordToTxt\bin\Release\WordToTxt.exe.config
+C:\Users\antzy_000\Documents\Programming\D\WordParser\WordToTxt\bin\Release\WordToTxt.exe
+C:\Users\antzy_000\Documents\Programming\D\WordParser\WordToTxt\bin\Release\WordToTxt.pdb
+C:\Users\antzy_000\Documents\Programming\D\WordParser\WordToTxt\obj\Release\WordToTxt.exe
+C:\Users\antzy_000\Documents\Programming\D\WordParser\WordToTxt\obj\Release\WordToTxt.pdb

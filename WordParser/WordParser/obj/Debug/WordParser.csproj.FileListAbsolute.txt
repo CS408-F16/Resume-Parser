@@ -1,0 +1,6 @@
+C:\Users\antzy_000\Documents\Programming\D\WordParser\WordParser\bin\Debug\Parser.pdb
+C:\Users\antzy_000\Documents\Programming\D\WordParser\WordParser\obj\Debug\WordParser.csprojResolveAssemblyReference.cache
+C:\Users\antzy_000\Documents\Programming\D\WordParser\WordParser\obj\Debug\Parser.pdb
+C:\Users\antzy_000\Documents\Programming\D\WordParser\WordParser\bin\Debug\Parser.dll.config
+C:\Users\antzy_000\Documents\Programming\D\WordParser\WordParser\bin\Debug\Parser.dll
+C:\Users\antzy_000\Documents\Programming\D\WordParser\WordParser\obj\Debug\Parser.dll
